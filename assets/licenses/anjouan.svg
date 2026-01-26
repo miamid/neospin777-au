@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none">
+  <rect width="80" height="80" rx="8" fill="#1a1a2e" opacity="0.3"/>
+  <path d="M40 20L55 35L40 50L25 35L40 20Z" stroke="white" stroke-width="2" fill="none" opacity="0.9"/>
+  <circle cx="40" cy="35" r="5" fill="white" opacity="0.9"/>
+  <path d="M30 50H50M35 50V60M45 50V60M30 60H50" stroke="white" stroke-width="2" opacity="0.9"/>
+  <text x="40" y="73" font-family="Arial" font-size="7" font-weight="bold" fill="white" text-anchor="middle" opacity="0.9">ANJOUAN</text>
+</svg>

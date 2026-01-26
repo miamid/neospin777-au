@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none">
+  <rect width="80" height="80" rx="8" fill="#1a1a2e" opacity="0.3"/>
+  <rect x="25" y="25" width="30" height="30" stroke="white" stroke-width="2" fill="none" opacity="0.9"/>
+  <path d="M40 30V40H50" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.9"/>
+  <circle cx="40" cy="45" r="3" fill="white" opacity="0.9"/>
+  <text x="40" y="68" font-family="Arial" font-size="6" font-weight="bold" fill="white" text-anchor="middle" opacity="0.9">UK GAMBLING</text>
+  <text x="40" y="74" font-family="Arial" font-size="6" font-weight="bold" fill="white" text-anchor="middle" opacity="0.9">COMMISSION</text>
+</svg>

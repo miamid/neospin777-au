@@ -1,0 +1,685 @@
+/* ========== VIP PAGE STYLES ========== */
+.vip-page {
+    width: 100%;
+}
+
+/* ========== VIP HERO ========== */
+.vip-hero {
+    background: linear-gradient(135deg, var(--accent-gradient-start), var(--accent-gradient-end));
+    padding: 80px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.vip-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 30% 50%, rgba(255,255,255,0.1) 0%, transparent 50%);
+    animation: shimmer 8s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+    0%, 100% { opacity: 0.3; transform: translateX(0); }
+    50% { opacity: 0.6; transform: translateX(20px); }
+}
+
+.vip-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.vip-badge-large {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.vip-badge-large svg {
+    width: 40px;
+    height: 40px;
+    color: var(--accent-primary);
+}
+
+.vip-hero h1 {
+    font-size: 48px;
+    font-weight: 900;
+    color: var(--text-primary);
+    margin-bottom: 15px;
+    text-shadow: 0 2px 20px rgba(0,0,0,0.3);
+}
+
+.vip-tagline {
+    font-size: 20px;
+    color: var(--text-secondary);
+    margin-bottom: 50px;
+}
+
+.vip-stats {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat-value {
+    font-size: 36px;
+    font-weight: 900;
+    color: var(--accent-primary);
+    margin-bottom: 8px;
+}
+
+.stat-label {
+    font-size: 14px;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* ========== CONTENT WRAPPER ========== */
+.vip-content-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+.section-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--text-primary);
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.section-description {
+    font-size: 16px;
+    color: var(--text-secondary);
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+/* ========== VIP LEVELS ========== */
+.vip-levels-section {
+    margin-bottom: 80px;
+}
+
+.vip-levels {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.vip-level {
+    background: var(--secondary-bg);
+    border-radius: 16px;
+    padding: 30px 20px;
+    text-align: center;
+    border: 2px solid var(--border-light);
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.vip-level:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px var(--shadow-dark);
+}
+
+.level-popular {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+    color: var(--primary-bg);
+    padding: 4px 15px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.level-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.level-icon svg {
+    width: 32px;
+    height: 32px;
+}
+
+.vip-level.bronze .level-icon {
+    background: linear-gradient(135deg, #cd7f32, #8b5a2b);
+}
+
+.vip-level.silver .level-icon {
+    background: linear-gradient(135deg, #c0c0c0, #808080);
+}
+
+.vip-level.gold .level-icon {
+    background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+    box-shadow: 0 5px 20px rgba(241, 196, 15, 0.4);
+}
+
+.vip-level.platinum .level-icon {
+    background: linear-gradient(135deg, #e5e4e2, #a0a0a0);
+}
+
+.vip-level h3 {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 10px;
+}
+
+.level-requirement {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+    padding: 8px;
+    background: var(--primary-bg);
+    border-radius: 8px;
+}
+
+.level-benefits {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+    text-align: left;
+}
+
+.level-benefits li {
+    padding: 8px 0 8px 25px;
+    font-size: 13px;
+    color: var(--text-secondary);
+    position: relative;
+}
+
+.level-benefits li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--success-color);
+    font-weight: bold;
+}
+
+.level-badge {
+    display: inline-block;
+    padding: 6px 15px;
+    background: var(--primary-bg);
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-muted);
+}
+
+.vip-level.gold {
+    border-color: var(--accent-primary);
+}
+
+.vip-level.gold:hover {
+    border-color: var(--accent-secondary);
+}
+
+/* ========== VIP BENEFITS ========== */
+.vip-benefits-section {
+    margin-bottom: 80px;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.benefit-item {
+    background: var(--secondary-bg);
+    border-radius: 12px;
+    padding: 30px;
+    text-align: center;
+    border: 1px solid var(--border-light);
+    transition: all 0.3s ease;
+}
+
+.benefit-item:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-primary);
+}
+
+.benefit-icon {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto 20px;
+    color: var(--accent-primary);
+}
+
+.benefit-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.benefit-item h4 {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 12px;
+}
+
+.benefit-item p {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ========== JOIN SECTION ========== */
+.vip-join-section {
+    margin-bottom: 80px;
+}
+
+.join-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    background: var(--secondary-bg);
+    border-radius: 20px;
+    padding: 50px;
+    border: 1px solid var(--border-light);
+    align-items: center;
+}
+
+.join-content h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 15px;
+}
+
+.join-content > p {
+    font-size: 16px;
+    color: var(--text-secondary);
+    margin-bottom: 25px;
+}
+
+.join-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 30px 0;
+}
+
+.join-features li {
+    padding: 10px 0 10px 30px;
+    font-size: 14px;
+    color: var(--text-secondary);
+    position: relative;
+}
+
+.join-features li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--accent-primary);
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.join-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.join-btn {
+    padding: 14px 28px;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.join-btn.primary {
+    background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+    color: var(--primary-bg);
+}
+
+.join-btn.primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(241, 196, 15, 0.3);
+}
+
+.join-btn.secondary {
+    background: transparent;
+    color: var(--accent-primary);
+    border: 2px solid var(--accent-primary);
+}
+
+.join-btn.secondary:hover {
+    background: var(--accent-primary);
+    color: var(--primary-bg);
+}
+
+/* ========== VIP CARD MOCKUP ========== */
+.vip-card-mockup {
+    width: 100%;
+    height: 280px;
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    border-radius: 20px;
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+}
+
+.card-shine {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent 30%, rgba(255,255,255,0.1) 50%, transparent 70%);
+    animation: shine 3s infinite;
+}
+
+@keyframes shine {
+    0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+    100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+}
+
+.card-content {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-logo {
+    font-size: 28px;
+    font-weight: 900;
+    color: var(--accent-primary);
+    text-shadow: 0 2px 10px rgba(241, 196, 15, 0.5);
+}
+
+.card-level {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-bottom: 10px;
+}
+
+.card-name {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 5px;
+}
+
+.card-number {
+    font-size: 16px;
+    color: var(--text-secondary);
+    letter-spacing: 2px;
+}
+
+/* ========== FAQ SECTION ========== */
+.vip-faq-section {
+    margin-bottom: 60px;
+}
+
+.faq-list {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background: var(--secondary-bg);
+    border-radius: 12px;
+    margin-bottom: 15px;
+    border: 1px solid var(--border-light);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+    border-color: var(--accent-primary);
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 25px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.faq-question h4 {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.faq-question svg {
+    width: 24px;
+    height: 24px;
+    color: var(--text-muted);
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+}
+
+.faq-item.active .faq-question svg {
+    transform: rotate(180deg);
+    color: var(--accent-primary);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 200px;
+    padding: 0 25px 20px;
+}
+
+.faq-answer p {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* ========== RESPONSIVE DESIGN ========== */
+@media screen and (max-width: 1024px) {
+    .vip-levels {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .join-card {
+        gap: 30px;
+        padding: 40px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .vip-hero {
+        padding: 60px 20px;
+    }
+    
+    .vip-hero h1 {
+        font-size: 36px;
+    }
+    
+    .vip-tagline {
+        font-size: 18px;
+    }
+    
+    .vip-stats {
+        flex-direction: row;
+        gap: 30px;
+    }
+    
+    .stat-value {
+        font-size: 28px;
+    }
+    
+    .vip-content-wrapper {
+        padding: 40px 20px;
+    }
+    
+    .section-title {
+        font-size: 28px;
+    }
+    
+    .vip-levels {
+        grid-template-columns: 1fr;
+    }
+    
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .join-card {
+        grid-template-columns: 1fr;
+        padding: 30px;
+        gap: 40px;
+    }
+    
+    .join-visual {
+        order: -1;
+    }
+    
+    .vip-card-mockup {
+        height: 220px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .vip-hero {
+        padding: 40px 15px;
+    }
+    
+    .vip-hero h1 {
+        font-size: 28px;
+    }
+    
+    .vip-tagline {
+        font-size: 16px;
+        margin-bottom: 35px;
+    }
+    
+    .vip-stats {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .vip-content-wrapper {
+        padding: 30px 15px;
+    }
+    
+    .section-title {
+        font-size: 24px;
+    }
+    
+    .section-description {
+        font-size: 14px;
+    }
+    
+    .vip-level {
+        padding: 25px 15px;
+    }
+    
+    .benefit-item {
+        padding: 25px 20px;
+    }
+    
+    .join-card {
+        padding: 25px 20px;
+    }
+    
+    .join-content h2 {
+        font-size: 24px;
+    }
+    
+    .join-buttons {
+        flex-direction: column;
+    }
+    
+    .join-btn {
+        width: 100%;
+    }
+    
+    .vip-card-mockup {
+        height: 200px;
+        padding: 20px;
+    }
+    
+    .card-logo {
+        font-size: 22px;
+    }
+    
+    .card-name {
+        font-size: 16px;
+    }
+    
+    .card-number {
+        font-size: 14px;
+    }
+    
+    .faq-question {
+        padding: 15px 20px;
+    }
+    
+    .faq-question h4 {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .vip-badge-large {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .vip-badge-large svg {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .level-icon {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .level-icon svg {
+        width: 26px;
+        height: 26px;
+    }
+}

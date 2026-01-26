@@ -1,0 +1,576 @@
+/* ========== WITHDRAWAL PAGE STYLES ========== */
+.withdrawal-container {
+    min-height: calc(100vh - 120px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.withdrawal-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 1200px;
+    width: 100%;
+    background: var(--secondary-bg);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px var(--shadow-dark);
+    border: 1px solid var(--border-light);
+}
+
+/* ========== LEFT SIDE (INFO) ========== */
+.withdrawal-left {
+    padding: 50px 40px;
+    background: linear-gradient(135deg, var(--accent-gradient-start), var(--accent-gradient-end));
+    position: relative;
+    overflow: hidden;
+}
+
+.withdrawal-left::before {
+    content: '';
+    position: absolute;
+    bottom: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, transparent 70%);
+    animation: rotate 15s linear infinite;
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.withdrawal-info {
+    position: relative;
+    z-index: 2;
+}
+
+.withdrawal-info h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.withdrawal-info > p {
+    font-size: 18px;
+    color: var(--text-secondary);
+    margin-bottom: 35px;
+    line-height: 1.5;
+}
+
+/* ========== BENEFIT CARDS ========== */
+.withdrawal-benefits {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 35px;
+}
+
+.benefit-card {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    padding: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    transition: all 0.3s ease;
+}
+
+.benefit-card:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateX(5px);
+}
+
+.benefit-icon {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    margin-right: 15px;
+    color: var(--accent-primary);
+}
+
+.benefit-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.benefit-content h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 4px;
+}
+
+.benefit-content p {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+/* ========== WITHDRAWAL NOTE ========== */
+.withdrawal-note {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.note-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.note-header svg {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.withdrawal-note ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.withdrawal-note ul li {
+    padding: 8px 0 8px 25px;
+    color: var(--text-secondary);
+    font-size: 14px;
+    position: relative;
+}
+
+.withdrawal-note ul li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--accent-primary);
+    font-weight: bold;
+}
+
+/* ========== RIGHT SIDE (FORM) ========== */
+.withdrawal-right {
+    padding: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.withdrawal-form-container {
+    width: 100%;
+    max-width: 450px;
+}
+
+/* ========== BALANCE DISPLAY ========== */
+.balance-display {
+    text-align: center;
+    background: var(--primary-bg);
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 30px;
+    border: 1px solid var(--border-light);
+}
+
+.balance-label {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-bottom: 10px;
+}
+
+.balance-amount {
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--accent-primary);
+    margin-bottom: 8px;
+}
+
+.balance-pending {
+    font-size: 14px;
+    color: var(--text-secondary);
+}
+
+/* ========== FORM SECTIONS ========== */
+.form-section {
+    margin-bottom: 30px;
+}
+
+.form-section h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 15px;
+}
+
+/* ========== METHOD SELECTOR ========== */
+.method-selector {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-height: 400px;
+    overflow-y: auto;
+    padding-right: 5px;
+}
+
+.method-selector::-webkit-scrollbar {
+    width: 6px;
+}
+
+.method-selector::-webkit-scrollbar-track {
+    background: var(--primary-bg);
+    border-radius: 3px;
+}
+
+.method-selector::-webkit-scrollbar-thumb {
+    background: var(--border-medium);
+    border-radius: 3px;
+}
+
+.method-selector::-webkit-scrollbar-thumb:hover {
+    background: var(--text-muted);
+}
+
+.method-option {
+    cursor: pointer;
+}
+
+.method-option input[type="radio"] {
+    display: none;
+}
+
+.method-card {
+    display: flex;
+    align-items: center;
+    background: var(--primary-bg);
+    border: 2px solid var(--border-light);
+    border-radius: 12px;
+    padding: 15px;
+    transition: all 0.3s ease;
+}
+
+.method-option input[type="radio"]:checked + .method-card {
+    border-color: var(--accent-primary);
+    background: rgba(241, 196, 15, 0.05);
+}
+
+.method-card:hover {
+    border-color: var(--border-medium);
+}
+
+.method-icon {
+    width: 32px;
+    height: 32px;
+    margin-right: 15px;
+    color: var(--text-muted);
+    flex-shrink: 0;
+}
+
+.method-option input[type="radio"]:checked + .method-card .method-icon {
+    color: var(--accent-primary);
+}
+
+.method-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.method-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.method-name {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 4px;
+}
+
+.method-time {
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+.method-check {
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--border-light);
+    border-radius: 50%;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.method-option input[type="radio"]:checked + .method-card .method-check {
+    border-color: var(--accent-primary);
+}
+
+.method-option input[type="radio"]:checked + .method-card .method-check::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    background: var(--accent-primary);
+    border-radius: 50%;
+}
+
+/* ========== AMOUNT INPUT ========== */
+.amount-input-group {
+    display: flex;
+    align-items: center;
+    background: var(--primary-bg);
+    border: 2px solid var(--border-light);
+    border-radius: 12px;
+    padding: 5px 5px 5px 15px;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+}
+
+.amount-input-group:focus-within {
+    border-color: var(--accent-primary);
+}
+
+.currency-symbol {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-muted);
+    margin-right: 10px;
+}
+
+.amount-input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: var(--text-primary);
+    font-size: 20px;
+    font-weight: 600;
+    padding: 10px 0;
+    outline: none;
+}
+
+.amount-input::placeholder {
+    color: var(--text-muted);
+}
+
+.max-btn {
+    padding: 8px 15px;
+    background: var(--accent-primary);
+    border: none;
+    border-radius: 8px;
+    color: var(--primary-bg);
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.max-btn:hover {
+    background: var(--accent-secondary);
+    transform: scale(1.05);
+}
+
+/* ========== QUICK AMOUNTS ========== */
+.quick-amounts {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.quick-amount-btn {
+    padding: 10px;
+    background: var(--primary-bg);
+    border: 1px solid var(--border-light);
+    border-radius: 8px;
+    color: var(--text-primary);
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.quick-amount-btn:hover {
+    border-color: var(--accent-primary);
+    color: var(--accent-primary);
+    transform: translateY(-2px);
+}
+
+/* ========== FORM INPUT ========== */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+}
+
+.form-input {
+    width: 100%;
+    padding: 12px 15px;
+    background: var(--primary-bg);
+    border: 2px solid var(--border-light);
+    border-radius: 12px;
+    color: var(--text-primary);
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: var(--accent-primary);
+}
+
+.form-input::placeholder {
+    color: var(--text-muted);
+}
+
+/* ========== WITHDRAWAL SUMMARY ========== */
+.withdrawal-summary {
+    background: var(--primary-bg);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 25px;
+    border: 1px solid var(--border-light);
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    color: var(--text-secondary);
+    font-size: 14px;
+    border-bottom: 1px solid var(--border-light);
+}
+
+.summary-row:last-child {
+    border-bottom: none;
+}
+
+.summary-row.total {
+    padding-top: 15px;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.summary-value {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.summary-row.total .summary-value {
+    color: var(--accent-primary);
+    font-size: 18px;
+}
+
+/* ========== SUBMIT BUTTON ========== */
+.submit-btn {
+    width: 100%;
+    padding: 16px;
+    background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+    border: none;
+    border-radius: 12px;
+    color: var(--primary-bg);
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 15px;
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(241, 196, 15, 0.3);
+}
+
+.submit-btn:active {
+    transform: translateY(0);
+}
+
+/* ========== FORM NOTE ========== */
+.form-note {
+    font-size: 12px;
+    color: var(--text-muted);
+    text-align: center;
+    line-height: 1.5;
+}
+
+/* ========== RESPONSIVE DESIGN ========== */
+@media screen and (max-width: 768px) {
+    .withdrawal-wrapper {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+    }
+    
+    .withdrawal-left {
+        padding: 40px 30px;
+        order: 2;
+    }
+    
+    .withdrawal-right {
+        padding: 40px 30px;
+        order: 1;
+    }
+
+    .method-selector {
+        max-height: none;
+        overflow-y: visible;
+    }
+
+    .withdrawal-info h2 {
+        font-size: 24px;
+    }
+    
+    .balance-amount {
+        font-size: 28px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .withdrawal-container {
+        padding: 15px;
+    }
+    
+    .withdrawal-left,
+    .withdrawal-right {
+        padding: 30px 20px;
+    }
+    
+    .quick-amounts {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .benefit-card {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .benefit-icon {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .balance-amount {
+        font-size: 24px;
+    }
+    
+    .amount-input {
+        font-size: 18px;
+    }
+}

@@ -1,0 +1,406 @@
+/* ========== PROMOTIONS PAGE STYLES ========== */
+.promotions-page {
+    padding: 40px 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ========== PROMOTIONS HEADER ========== */
+.promotions-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.promotions-header h1 {
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 12px;
+    background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.promotions-header p {
+    font-size: 18px;
+    color: var(--text-secondary);
+}
+
+/* ========== PROMOTIONS TABS ========== */
+.promotions-tabs {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.promo-tab {
+    padding: 12px 24px;
+    background: var(--secondary-bg);
+    border: 2px solid var(--border-light);
+    border-radius: 25px;
+    color: var(--text-secondary);
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.promo-tab:hover {
+    border-color: var(--accent-primary);
+    color: var(--accent-primary);
+}
+
+.promo-tab.active {
+    background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+    border-color: var(--accent-primary);
+    color: var(--primary-bg);
+}
+
+/* ========== PROMOTIONS GRID ========== */
+.promotions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 24px;
+    margin-bottom: 50px;
+}
+
+/* ========== PROMO CARD ========== */
+.promo-card {
+    background: var(--secondary-bg);
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid var(--border-light);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.promo-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 35px var(--shadow-dark);
+    border-color: var(--accent-primary);
+}
+
+.promo-card.featured {
+    grid-column: span 2;
+}
+
+/* ========== PROMO BADGE ========== */
+.promo-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    z-index: 3;
+    backdrop-filter: blur(10px);
+}
+
+.promo-badge:not(.hot):not(.new):not(.exclusive) {
+    background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+    color: var(--primary-bg);
+}
+
+.promo-badge.hot {
+    background: linear-gradient(135deg, #ff6b6b, #ee5a6f);
+    color: var(--text-primary);
+}
+
+.promo-badge.new {
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
+    color: var(--primary-bg);
+}
+
+.promo-badge.exclusive {
+    background: linear-gradient(135deg, #ffd700, #ffed4e);
+    color: var(--primary-bg);
+}
+
+/* ========== PROMO IMAGE ========== */
+.promo-image {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.promo-card.featured .promo-image {
+    height: 280px;
+}
+
+.promo-img-1 {
+    background: linear-gradient(135deg, var(--accent-gradient-start), var(--accent-gradient-end));
+}
+
+.promo-img-2 {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+.promo-img-3 {
+    background: linear-gradient(135deg, #f093fb, #f5576c);
+}
+
+.promo-img-4 {
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
+}
+
+.promo-img-5 {
+    background: linear-gradient(135deg, #43e97b, #38f9d7);
+}
+
+.promo-img-6 {
+    background: linear-gradient(135deg, #fa709a, #fee140);
+}
+
+.promo-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 25px;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+}
+
+.promo-overlay h3 {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+}
+
+.promo-highlight {
+    font-size: 28px;
+    font-weight: 900;
+    color: var(--accent-primary);
+    text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+/* ========== PROMO CONTENT ========== */
+.promo-content {
+    padding: 20px;
+}
+
+.promo-type {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.type-badge {
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.type-badge.casino {
+    background: rgba(108, 92, 231, 0.2);
+    color: var(--accent-gradient-start);
+}
+
+.type-badge.sports {
+    background: rgba(245, 87, 108, 0.2);
+    color: #f5576c;
+}
+
+.type-badge.vip {
+    background: rgba(255, 215, 0, 0.2);
+    color: var(--accent-primary);
+}
+
+.time-badge {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+.time-badge svg {
+    width: 14px;
+    height: 14px;
+}
+
+.promo-content h4 {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 12px;
+}
+
+.promo-description {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* ========== PROMO FEATURES ========== */
+.promo-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+}
+
+.promo-features li {
+    padding: 8px 0 8px 25px;
+    font-size: 13px;
+    color: var(--text-secondary);
+    position: relative;
+}
+
+.promo-features li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--success-color);
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* ========== PROMO BUTTON ========== */
+.promo-btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+    border: none;
+    border-radius: 10px;
+    color: var(--primary-bg);
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.promo-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(241, 196, 15, 0.4);
+}
+
+/* ========== PROMOTIONS FOOTER ========== */
+.promotions-footer {
+    background: var(--secondary-bg);
+    border-radius: 16px;
+    padding: 30px;
+    border: 1px solid var(--border-light);
+}
+
+.footer-info h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 15px;
+}
+
+.footer-info p {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.terms-link {
+    display: inline-block;
+    color: var(--accent-primary);
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.terms-link:hover {
+    color: var(--accent-secondary);
+}
+
+/* ========== RESPONSIVE DESIGN ========== */
+@media screen and (max-width: 1024px) {
+    .promotions-grid {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+    
+    .promo-card.featured {
+        grid-column: span 1;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .promotions-page {
+        padding: 30px 20px;
+    }
+    
+    .promotions-header h1 {
+        font-size: 28px;
+    }
+    
+    .promotions-header p {
+        font-size: 16px;
+    }
+    
+    .promotions-tabs {
+        gap: 8px;
+    }
+    
+    .promo-tab {
+        padding: 10px 18px;
+        font-size: 13px;
+    }
+    
+    .promotions-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .promotions-page {
+        padding: 20px 15px;
+    }
+    
+    .promotions-header h1 {
+        font-size: 24px;
+    }
+    
+    .promo-image {
+        height: 180px;
+    }
+    
+    .promo-card.featured .promo-image {
+        height: 220px;
+    }
+    
+    .promo-overlay h3 {
+        font-size: 18px;
+    }
+    
+    .promo-highlight {
+        font-size: 24px;
+    }
+    
+    .promotions-footer {
+        padding: 20px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .promotions-header h1 {
+        font-size: 20px;
+    }
+    
+    .promo-content {
+        padding: 15px;
+    }
+    
+    .promo-content h4 {
+        font-size: 16px;
+    }
+}

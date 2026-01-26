@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none">
+  <rect width="80" height="80" rx="8" fill="#1a1a2e" opacity="0.3"/>
+  <path d="M25 30L40 20L55 30V50L40 60L25 50V30Z" stroke="white" stroke-width="2" fill="none" opacity="0.9"/>
+  <path d="M33 35L40 42L47 35" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.9"/>
+  <circle cx="40" cy="45" r="3" fill="white" opacity="0.9"/>
+  <text x="40" y="73" font-family="Arial" font-size="6.5" font-weight="bold" fill="white" text-anchor="middle" opacity="0.9">KAHNAWAKE</text>
+</svg>
